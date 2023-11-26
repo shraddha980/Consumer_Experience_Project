@@ -1,0 +1,245 @@
+[2023-11-26 12:59:39,435] root - INFO - Completed converting dataframe into dictionary
+[2023-11-26 12:59:42,147] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-11-26 12:59:52,847] root - INFO - Start creating TrainingPipeline Directory
+[2023-11-26 12:59:52,847] root - INFO - Completed creating TrainingPipeline Directory
+[2023-11-26 12:59:52,847] root - INFO - Creating Directories for DataIngestion
+[2023-11-26 12:59:52,847] root - INFO - Completed creating directories for DataIngestion
+[2023-11-26 12:59:52,848] root - INFO - Exporting collection data as DataFrame
+[2023-11-26 12:59:52,901] root - INFO - Shape of DataFrame is: , (1000, 2)
+[2023-11-26 12:59:53,491] root - INFO - Creating Data Transformation Attributes
+[2023-11-26 12:59:53,504] root - INFO - Shape of train_df: , (800, 2)
+[2023-11-26 12:59:53,508] root - INFO - shape of test_df: , (200, 2)
+[2023-11-26 12:59:53,508] root - INFO - shape of train_input_feature is:  (800,)
+[2023-11-26 12:59:53,508] root - INFO - Content of train_input_feature: 0    first ever debut film riveting chilling moment...
+1    watching film, amazed media perception mould p...
+2    soon hits screen, destroys intelligent life fo...
+3    film could classified drama, idea. john voight...
+4    one best ensemble acted films i've ever seen. ...
+5    rented thinking would pretty good cover movie ...
+6    awful film! must real stinkers nominated golde...
+7    series, made televisión española (tve) basical...
+8    debating movie 2012 chose inglourious basterds...
+9    yes, bit cheesy. suspenseful entertaining, one...
+Name: review, dtype: object
+[2023-11-26 12:59:53,508] root - INFO - shape of train_target_feature (800,)
+[2023-11-26 12:59:53,509] root - INFO - Content of train_target_feature 0    positive
+1    positive
+2    negative
+3    negative
+4    positive
+5    negative
+6    negative
+7    negative
+8    negative
+9    positive
+Name: sentiment, dtype: object
+[2023-11-26 12:59:53,509] root - INFO - shape of test_input_feature: (200,)
+[2023-11-26 12:59:53,509] root - INFO - Shape of test_target_feature:  (200,)
+[2023-11-26 12:59:53,511] root - INFO - Content after applying label encoder on train target: [1 1 0 0 1 0 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 1 0 1 1 0 0 1 1 1 1 0 0 1 1 1 0
+ 1 0 0 0 0 1 0 1 0 1 1 0 1 1 1 0 1 0 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 0 0 1 0
+ 1 1 1 0 1 0 1 1 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 0
+ 0 1 1 0 1 1 0 1 0 0 1 0 1 1 1 0 0 1 0 1 1 0 1 0 1 1 0 0 1 1 1 1 1 0 0 0 0
+ 0 1 1 1 0 1 1 0 0 0 1 0 1 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 1 0 0 1 1 0 1 1 1
+ 1 0 0 1 1 0 0 0 1 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 1 0 1
+ 1 0 1 1 1 1 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 1 0 1 1 1 0 1 1 0 0 1 0 0 0 0 0
+ 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 0 0 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1
+ 1 0 0 1 1 0 0 1 1 0 1 1 0 1 0 1 1 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 1 1 0 0 0
+ 0 1 1 0 1 0 1 1 1 0 1 1 0 0 0 1 1 1 0 1 1 1 1 1 1 0 1 0 0 0 0 0 1 1 0 1 0
+ 0 1 1 1 1 1 0 1 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 1 1
+ 1 1 1 0 0 0 0 1 1 0 1 0 0 0 0 1 1 1 1 1 1 0 0 0 1 0 0 0 1 1 1 0 1 0 1 1 1
+ 1 1 0 1 0 0 1 0 1 0 1 1 0 1 0 1 0 1 1 1 1 0 1 0 1 1 1 1 1 1 0 1 0 1 0 0 1
+ 0 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 1 1 0 0 1 0 0 1 0 1 0 0 1 0
+ 1 0 1 0 0 1 1 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1 1 1 1 1 0 0 1 0 0 0 0 0 0 1 1
+ 1 0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0
+ 1 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 1 0 1 0 1 1 1 0 0 0 1 0 0 0 1 1
+ 0 1 1 0 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1
+ 0 1 1 1 0 0 0 0 0 0 0 1 1 0 1 0 0 0 1 1 0 0 1 1 1 1 0 1 1 0 0 0 1 1 0 1 1
+ 1 1 0 0 1 1 1 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1
+ 1 1 0 0 0 1 0 0 1 1 0 1 1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 0 0 0 1 0
+ 0 0 1 0 1 0 1 0 1 0 1 1 0 1 0 1 0 0 0 1 1 1 0]
+[2023-11-26 12:59:53,512] root - INFO - Content after applying label encoder on test target: [1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 1 1 1 0 1 1 0 1 1 0 0 1 1 0 0
+ 0 0 1 1 0 1 0 0 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 0 1 0 1 1 1 0 1 1 0 0 1 1 1
+ 1 1 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1 1
+ 0 1 1 0 0 1 0 1 0 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 0
+ 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1 1 0 1 0 1 0 0 1 1 0 1 1 1 1 0 0 1
+ 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0]
+[2023-11-26 12:59:53,624] root - INFO - Applying CV Transformation
+[2023-11-26 12:59:53,719] root - INFO - Content after applying CV transform : [[0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ ...
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]]
+[2023-11-26 12:59:53,742] root - INFO - Content after applying cv transform: [[0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ ...
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]]
+[2023-11-26 12:59:53,773] root - INFO - Content after applying cv transform: [[0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ ...
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]]
+[2023-11-26 12:59:53,918] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:54,025] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:54,026] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:54,029] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:54,037] root - INFO - Initializing Attributes 
+[2023-11-26 12:59:54,037] root - INFO - Completed Initializing the Attributes
+[2023-11-26 12:59:54,037] root - INFO - Importing Train and Test Variables
+[2023-11-26 12:59:54,066] root - INFO - Shape of Train array is : (800, 15936)
+[2023-11-26 12:59:54,071] root - INFO - Shape of Test array is : (200, 15936)
+[2023-11-26 12:59:54,072] root - INFO - Shape of x_train and y_train is (800, 15935), (800,)
+[2023-11-26 12:59:54,072] root - INFO - Shape of x_test and y_test is (200, 15935), (200,)
+[2023-11-26 12:59:54,072] root - INFO - Train the model
+[2023-11-26 12:59:57,328] root - INFO - Predicting yhat_train and yhat_test
+[2023-11-26 12:59:57,422] root - INFO - Content of yhat_train is [1 1 0 0 1 0 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 1 0 1 1 0 0 1 1 1 1 0 0 1 1 1 0
+ 1 0 0 0 0 1 0 1 0 1 1 0 1 1 1 0 1 0 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 0 0 1 0
+ 1 1 1 0 1 0 1 1 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 0
+ 0 1 1 0 1 1 0 1 0 0 1 0 1 1 1 0 0 1 0 1 1 0 1 0 1 1 0 0 1 1 1 1 1 0 0 0 0
+ 0 1 1 1 0 1 1 0 0 0 1 0 1 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 1 0 0 1 1 0 1 1 1
+ 1 0 0 1 1 0 0 0 1 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 1 0 1
+ 1 0 1 1 1 1 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 1 0 1 1 1 0 1 1 0 0 1 0 0 0 0 0
+ 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 0 0 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1
+ 1 0 0 1 1 0 0 1 1 0 1 1 0 1 0 1 1 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 1 1 0 0 0
+ 0 1 1 0 1 0 1 1 1 0 1 1 0 0 0 1 1 1 0 1 1 1 1 1 1 0 1 0 0 0 0 0 1 1 0 1 0
+ 0 1 1 1 1 1 0 1 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 1 1
+ 1 1 1 0 0 0 0 1 1 0 1 0 0 0 0 1 1 1 1 1 1 0 0 0 1 0 0 0 1 1 1 0 1 0 1 1 1
+ 1 1 0 1 0 0 1 0 1 0 1 1 0 1 0 1 0 1 1 1 1 0 1 0 1 1 1 1 1 1 0 1 0 1 0 0 1
+ 0 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 1 1 0 0 1 0 0 1 0 1 0 0 1 0
+ 1 0 1 0 0 1 1 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1 1 1 1 1 0 0 1 0 0 0 0 0 0 1 1
+ 1 0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0
+ 1 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 1 0 1 0 1 1 1 0 0 0 1 0 0 0 1 1
+ 0 1 1 0 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1
+ 0 1 1 1 0 0 0 0 0 0 0 1 1 0 1 0 0 0 1 1 0 0 1 1 1 1 0 1 1 0 0 0 1 1 0 1 1
+ 1 1 0 0 1 1 1 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1
+ 1 1 0 0 0 1 0 0 1 1 0 1 1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 0 0 0 1 0
+ 0 0 1 0 1 0 1 0 1 0 1 1 0 1 0 1 0 0 0 1 1 1 0]
+[2023-11-26 12:59:57,464] root - INFO - Content of yhat_test is [1 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 1 1 0 1 1 1 1 1 0 1 0
+ 0 0 1 0 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1
+ 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 0 1 1 1 1
+ 0 1 1 0 0 1 1 1 0 1 1 0 0 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 0 1 0 1
+ 0 1 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0 0 1 0 0 1 1 1 1 0 1 1
+ 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0]
+[2023-11-26 12:59:57,464] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,522] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,528] root - INFO - Initiating Model Pusher Arguments
+[2023-11-26 12:59:57,528] root - INFO - Download Transformer Artifact and Model Trainer Artifact
+[2023-11-26 12:59:57,541] root - INFO - Save models in Model Pusher Directory
+[2023-11-26 12:59:57,542] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,646] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,647] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,705] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,705] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,706] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,706] root - INFO - Saving model in saved Model Directory
+[2023-11-26 12:59:57,707] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,764] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,765] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,766] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,766] root - INFO - Entered the save_object method of utils
+[2023-11-26 12:59:57,871] root - INFO - Exited the save_object method of utils
+[2023-11-26 12:59:57,871] root - INFO - Pusher Model Artifact : ModelPusherArtifact(pusher_model_dir='D:\\Consumer_Experience_Project\\artifact\\11262023__125952\\model_pusher\\saved_models', saved_model_dir='saved_models')
+[2023-11-26 12:59:57,872] root - INFO - Initiating Model Evaluation 
+[2023-11-26 12:59:57,872] root - INFO - Completed initiating Model Evaluation
+[2023-11-26 12:59:57,872] root - INFO - If saved model folder has model then we will comparewhich model is the best trained, current model or modelfrom the saved folder
+[2023-11-26 12:59:57,872] root - INFO - Importing Saved Model Paths from respective locations
+[2023-11-26 12:59:57,873] root - INFO -  saving Previously Trained Models in model and target_encoder
+[2023-11-26 12:59:57,883] root - INFO - Importing Currently Trained Model Paths
+[2023-11-26 12:59:57,891] root - INFO - Taking Test File Path
+[2023-11-26 12:59:57,897] root - INFO - Shape of test df is : (200, 2)
+[2023-11-26 12:59:57,971] root - INFO - test input df is 0      animation simple straightforward good vs. evil...
+1      jäniksen vuosi one jarva's political movies. t...
+2      decided watch one nominated oscar year. guess ...
+3      one favorite movies overlooked many movie goer...
+4      movie fails miserably every level. idea, let's...
+                             ...                        
+195    originally harped sequel "the slumber party ma...
+196    one time favorite cheap, corny, vampire b movi...
+197    response previous comments made residents regi...
+198    recently seen production dvd. first time seen ...
+199    seen most, laurel & hardy classic films. alway...
+Name: review, Length: 200, dtype: object
+[2023-11-26 12:59:57,972] root - INFO - test_target_df is 0      positive
+1      positive
+2      negative
+3      positive
+4      negative
+         ...   
+195    negative
+196    positive
+197    negative
+198    positive
+199    negative
+Name: sentiment, Length: 200, dtype: object
+[2023-11-26 12:59:57,993] root - INFO - transformed_test_input_df is   (0, 6)	1
+  (0, 334)	1
+  (0, 411)	1
+  (0, 419)	1
+  (0, 617)	1
+  (0, 626)	2
+  (0, 749)	1
+  (0, 750)	1
+  (0, 751)	4
+  (0, 752)	1
+  (0, 755)	1
+  (0, 777)	1
+  (0, 821)	1
+  (0, 933)	2
+  (0, 1205)	1
+  (0, 1253)	2
+  (0, 1403)	2
+  (0, 1722)	1
+  (0, 2534)	1
+  (0, 2682)	1
+  (0, 2762)	1
+  (0, 3172)	1
+  (0, 3556)	1
+  (0, 3636)	1
+  (0, 3950)	1
+  :	:
+  (199, 7035)	1
+  (199, 8094)	3
+  (199, 8372)	1
+  (199, 9111)	2
+  (199, 9281)	1
+  (199, 9570)	2
+  (199, 9878)	1
+  (199, 10565)	1
+  (199, 10743)	1
+  (199, 11098)	1
+  (199, 11370)	1
+  (199, 11398)	1
+  (199, 11722)	1
+  (199, 12452)	2
+  (199, 12548)	1
+  (199, 12569)	1
+  (199, 12669)	1
+  (199, 13301)	1
+  (199, 13523)	1
+  (199, 13681)	1
+  (199, 14747)	1
+  (199, 15137)	1
+  (199, 15434)	1
+  (199, 15499)	1
+  (199, 15758)	1
+[2023-11-26 12:59:58,014] root - INFO - prediction using Trained Model: [1 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 1 1 0 1 1 1 1 1 0 1 0
+ 0 0 1 0 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1
+ 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 0 1 1 1 1
+ 0 1 1 0 0 1 1 1 0 1 1 0 0 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 0 1 0 1
+ 0 1 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0 0 1 0 0 1 1 1 1 0 1 1
+ 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0]
+[2023-11-26 12:59:58,016] root - INFO - F1 score of Previous Model is : 0.7960199004975125
+[2023-11-26 12:59:58,036] root - INFO - prediction using Trained Model: [1 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 1 1 0 1 1 1 1 1 0 1 0
+ 0 0 1 0 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1
+ 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 0 1 1 1 1
+ 0 1 1 0 0 1 1 1 0 1 1 0 0 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 0 1 0 1
+ 0 1 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0 0 1 0 0 1 1 1 1 0 1 1
+ 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0]
+[2023-11-26 12:59:58,038] root - INFO - F1 score of Current Model is : 0.7960199004975125
+[2023-11-26 12:59:58,038] root - INFO - Current trained model is not better than Previous Trained Model
