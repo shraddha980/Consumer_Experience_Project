@@ -16,6 +16,7 @@ Steps taken during the feedback loop might be:
 - The business uses the sentiment scores to calculate the overall customer satisfaction and loyalty metrics, such as Net Promoter Score (NPS), Customer Satisfaction Score (CSAT), or Customer Effort Score (CES).
 - The business identifies the key drivers of customer satisfaction and loyalty, such as product quality, service delivery, pricing, or support.
 - The business uses the insights from the sentiment analysis and the customer satisfaction and loyalty metrics to improve the customer experience, such as by resolving issues, enhancing features, offering discounts, or rewarding loyal customers.
+- 
 **Postconditions:** Customer receives a better customer experience and is more likely to repurchase, recommend, or advocate for the business.
 **Exceptions:** Customer feedback is incomplete, inaccurate, or irrelevant. The sentiment analysis tool fails to capture the true emotion or intention of the customer. Customer satisfaction and loyalty metrics are not aligned with the business goals or customer expectations.
 
