@@ -61,5 +61,9 @@ We train the data on models Naive Bayes, Decision Trees, Random Forest Classifie
 
 ### Evaluation
 
-We check the model using Accuracy_Score using the metrics method from sklearn library.
+We check the model using Accuracy_Score using the metrics method from the sklearn library.
+
+## Future Scope
+
+The future scope of this project is that as the amount of data increases we can use deep learning algorithms to train the model.
 
